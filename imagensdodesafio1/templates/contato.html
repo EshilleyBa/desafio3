@@ -1,66 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNES</title>
+{% extends "base.html" %}
 
-    <style>
-   .a{
-        margin-top:24px;
-        margin-left: 20px;
-    }
-    .b{
-        
-    margin-left: 80%;  
-    }
+{% block contents %}
+    <div>
+        <h1>Entre em contato</h1>
 
-    .c{
-        margin-left: 25%;
-        margin-right: 27%;
-        text-align: justify;
-    }
- 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti asperiores, autem dicta ab ex quaerat
+            ratione aut reiciendis.</p>
+    </div>
 
+    <hr style="width:68%; margin:auto;">
 
+    <div>
+    <form method="POST" action="/contact" name="cadastro">
+        Seu e-mail:<br>
+        <input type="text" name="femail" required><br>
 
-    
-    </style>
-</head>
+        Assunto:<br>
+        <input type="text" name="fassunto" required><br>
 
-<body background="/static/fundo2.png">
-    <div class="a">
-    <img src="/static/logo.png">
-</div>
-<div class="b">
-    <a href="/" target="_self">home</a> 
-    <a href="/quemsomos" target="_self">quem somos</a>
-    <a href="/contato">Contato</a>
-</div>
+        Descrição:<br>
+        <input type="text" name="fdescricao" required><br><br>
 
-
-<div class="c">
-    <h2>entre em contato</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Nesciunt.</p>
-</div>
-
-
-<hr>
-<div style="margin-left: 25%;">
-<form>
-    seu email: <br>
-    <input type="text" name="seu e-mail"><br>
-    Assunto<br>
-    <input type="text" name="assunto"><br>
-    Descrição <br>
-    <input typename="descrição" style="height:100px"><br>
-    <input type="submit" value="enviar">
-</form>
-</div>
-
-
-
-<h6 style="text-align:center;">Todos os direitos reservados.</h6>
-</html>
+        <button type="submit" value="Enviar">Enviar</button>
+    </form>
+    </div>
+{% endblock contents %}
